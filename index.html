@@ -3,26 +3,50 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Random Dog</title>
+  <title>Random Foxes: Promise vs Async/Await</title>
   <style>
     body {
       display: flex;
-      justify-content: center;
+      flex-direction: column; /* Stack elements vertically */
       align-items: center;
       min-height: 100vh;
       background-color: #f0f0f0;
-      margin: 0;
+      margin: 20px;
+      font-family: sans-serif;
+    }
+    .image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px; /* Space between images */
+        margin-bottom: 20px;
+        flex-wrap: wrap; /* Allow wrapping on smaller screens */
     }
     img {
-      max-width: 90%;
-      max-height: 90vh;
+      max-width: 45%; /* Adjust max-width for two images */
+      max-height: 40vh; /* Adjust height */
+      min-width: 300px; /* Ensure a minimum size */
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      background-color: #ddd; /* Placeholder background */
+    }
+    #explanation {
+        max-width: 800px;
+        text-align: center;
+        background-color: #fff;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     }
   </style>
 </head>
 <body>
-  <img src="" alt="A random dog image will appear here">
+  <h1>Promise vs. Async/Await Fetch (Foxes!)</h1>
+  <div class="image-container">
+    <img id="img-promise" src="" alt="Fox image loaded using Promises">
+    <img id="img-async" src="" alt="Fox image loaded using Async/Await">
+  </div>
+  <p id="explanation">Loading explanation...</p>
 
   <script src="script.js"></script>
 </body>
